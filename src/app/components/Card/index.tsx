@@ -12,7 +12,7 @@ const Data = [
     description: "Our best picks for various needs and budgets.",
   },
   {
-    url: "assets/image/bitmap3.svg",
+    url: "assets/image/BitmapNew.svg",
     number: "03",
     title: "The Growth of Gaming",
     description: "How the pandemic has sparked fresh opportunities.",
@@ -22,11 +22,11 @@ const Data = [
 export default function Card() {
   return (
     <div className="flex flex-col lg:flex-row">
-      {Data.map((item: any) => (
-        <div className="flex flex-row p-5 lg:p-0">
-          <img src={item.url} />
+      {Data.map((item: any , index:number) => (
+        <div key={index} className="flex flex-row p-5 lg:p-0">
+          <img src={item.url} alt="landing" />
           <div className="flex flex-col m-5 gap-2">
-            <h1 className="text-[#C5C6CE] text-2xl font-bold lg:text-5xl">
+            <h1 className="text-[#C5C6CE] text-xl font-bold lg:text-3xl">
               {item.number}
             </h1>
             <p className="font-bold hover:text-[#F15D51]">{item.title}</p>

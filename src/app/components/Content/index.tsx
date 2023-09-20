@@ -1,11 +1,12 @@
 import Button from "../UI/Button";
+import Image from "next/image";
 
 export default function Content() {
   return (
     <div className="flex flex-col justify-center mt-12">
-      <img src="assets/image/landing.svg" />
+      <Image src="assets/image/landing.svg" alt="landing" width={730} height={250} />
       <div className="flex flex-col gap-10 p-10 lg:flex-row">
-        <h1 className="text-[#00001A] text-6xl font-bold">
+        <h1 className="text-[#00001A] font-bold text-2xl lg:text-5xl">
           The Bright Future of Web 3.0?
         </h1>
         <div>

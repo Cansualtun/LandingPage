@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 const Data = [
   {
@@ -30,7 +31,7 @@ export default function Header() {
   return (
     <div className="flex justify-between mx-auto p-4">
       <a href="https://flowbite.com/" className="flex items-center">
-        <img src="assets/icons/W.svg" className="h-8 mr-3" alt="Logo" />
+        <Image src="assets/icons/W.svg" className="h-8 mr-3" alt="Logo" width={64} height={40} />
       </a>
       <button
         data-collapse-toggle="navbar-default"
@@ -59,8 +60,8 @@ export default function Header() {
       </button>
       <div className="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8">
-          {Data.map((item) => (
-            <li>
+          {Data.map((item:any , index:number) => (
+            <li key={index}>
               <a
                 href={item.url}
                 className="block py-2 pl-3 pr-4 text-[#5E607A] rounded md:bg-transparent md:p-0 hover:text-[#F15D51]"
@@ -91,12 +92,12 @@ export default function Header() {
           onClick={() => setDrawerOpen(false)}
         >
           <span className="sr-only">Close menu</span>
-          <span className="text-5xl text-black">×</span>
+          <span className="p-4 text-5xl text-black">×</span>
         </button>
 
         <ul className="flex-col mt-40 font-medium">
-          {Data.map((item) => (
-            <li>
+          {Data.map((item: any , index:number) => (
+            <li key={index}>
               <a
                 href="#"
                 className="block py-2 pr-4 pl-3 text-[#00001A] space-y-10 text-xl"

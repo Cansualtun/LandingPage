@@ -19,8 +19,8 @@ export default function Sidebar() {
   return (
     <div className="bg-[#00001A] lg:w-[350px] mt-12 divide-y divide-blue-200 w-screen">
       <h1 className="font-bold text-[#E9AA52] text-4xl p-6">New</h1>
-      {Data.map((item: any) => (
-        <div className="flex flex-col p-3 m-3">
+      {Data.map((item: any , index: number) => (
+        <div key={index} className="flex flex-col p-3 m-3">
           <h1 className="font-bold text-[#FFFDFA] hover:text-[#E9AA52]">
             {item.title}
           </h1>
